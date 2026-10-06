@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+
+  body {
+    background: #090514;
+    color: #ffffff;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* AquaFi Deep Midnight Violet & Spotlight Stage Beams Theme */
+.aquafi-bg {
+  background-color: #090514;
+  background-image: 
+    radial-gradient(ellipse at 50% -5%, rgba(147, 51, 234, 0.45) 0%, rgba(76, 29, 149, 0.25) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #130a2a 0%, #090514 100%);
+}
+
+.aquafi-hero-spotlight {
+  background: 
+    radial-gradient(ellipse at 50% -10%, rgba(192, 132, 252, 0.5) 0%, rgba(147, 51, 234, 0.3) 40%, transparent 70%),
+    radial-gradient(ellipse at 20% 40%, rgba(126, 34, 206, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 40%, rgba(168, 85, 247, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg, #180d35 0%, #0d061e 100%);
+}
+
+.aquafi-spotlight-beam {
+  background: conic-gradient(from 180deg at 50% 0%, rgba(192, 132, 252, 0.25) 0deg, rgba(147, 51, 234, 0.05) 60deg, transparent 120deg, rgba(147, 51, 234, 0.05) 240deg, rgba(192, 132, 252, 0.25) 360deg);
+  filter: blur(20px);
+}
+
+/* Glassmorphism Panels Matching AquaFi Design */
+.aquafi-panel {
+  background: rgba(23, 14, 45, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 20px 50px rgba(7, 3, 18, 0.7), inset 0 1px 0 rgba(233, 213, 255, 0.2);
+}
+
+.aquafi-card {
+  background: rgba(28, 16, 54, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(168, 85, 247, 0.22);
+  box-shadow: 0 15px 35px rgba(5, 2, 15, 0.5), inset 0 1px 0 rgba(233, 213, 255, 0.15);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aquafi-card:hover {
+  background: rgba(38, 22, 74, 0.75);
+  border-color: rgba(192, 132, 252, 0.5);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(147, 51, 234, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.aquafi-pill {
+  background: rgba(45, 25, 85, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.aquafi-pill-light {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Custom AquaFi Glowing Violet & White Buttons */
+.btn-aquafi-primary {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 50%, #a855f7 100%);
+  color: #12072b;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+  transition: all 0.25s ease;
+}
+
+.btn-aquafi-primary:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 50%, #c084fc 100%);
+  box-shadow: 0 0 45px rgba(192, 132, 252, 0.75);
+  transform: translateY(-2px);
+}
+
+.btn-aquafi-white {
+  background: #ffffff;
+  color: #12072b;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-aquafi-white:hover {
+  background: #f3e8ff;
+  box-shadow: 0 0 25px rgba(192, 132, 252, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-aquafi-glass {
+  background: rgba(168, 85, 247, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.btn-aquafi-glass:hover {
+  background: rgba(168, 85, 247, 0.3);
+  border-color: rgba(216, 180, 254, 0.6);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Glowing Dome Arc Effect (matching center showcase card in AquaFi reference image) */
+.aquafi-dome-glow {
+  background: radial-gradient(ellipse at 50% 100%, rgba(192, 132, 252, 0.4) 0%, rgba(147, 51, 234, 0.15) 50%, transparent 75%);
+}
+
+.aquafi-arc-border {
+  border-top: 2px solid rgba(216, 180, 254, 0.7);
+  box-shadow: 0 -10px 30px rgba(168, 85, 247, 0.5);
+}
+
+/* Text Gradients */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #ffffff 0%, #e9d5ff 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(135deg, #d8b4fe 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090514;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b1754;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
